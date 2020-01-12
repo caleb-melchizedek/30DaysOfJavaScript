@@ -1,8 +1,5 @@
 <div align="center">
   <h1> 30 Days Of JavaScript</h1>
-  <a class="header-badge" target="_blank" href="https://github.com/Asabeneh/30DaysOfJavaScript">
-  <img alt="GitHub stars" src="https://img.shields.io/github/stars/asabeneh/30DaysOfJavaScript?style=social">
-  </a>
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/asabeneh/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
@@ -10,18 +7,17 @@
   <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/asabeneh?style=social">
   </a>
 
-<sub>Author:
-<a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
-<small> January, 2020</small>
-</sub>
-
+  <sub>Author:
+  <a href="https://www.linkedin.com/in/asabeneh/" target="_blank">Asabeneh Yetayeh</a><br>
+  <small> January, 2020</small>
+  </sub>
 </div>
 
-[<< Day 7](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/09_Day/09_day_function_programming.md) | [Day 9 >>](#)
+[<< Day 7](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/07_Day/07_day_functions.md) | [Day 9 >>](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/09_Day/09_day_higher_order_functions.md)
 
 ![Thirty Days Of JavaScript](../images/banners/day_1_8.png)
 
-- [Day 8](#day-8)
+- [📔 Day 8](#%f0%9f%93%94-day-8)
   - [Scope](#scope)
     - [Window Scope](#window-scope)
     - [Global scope](#global-scope)
@@ -38,8 +34,10 @@
       - [Getting object keys and values using Object.entries()](#getting-object-keys-and-values-using-objectentries)
       - [Checking properties using hasOwnProperty()](#checking-properties-using-hasownproperty)
   - [💻 Exercises](#%f0%9f%92%bb-exercises)
+    - [Exercises: Level 1](#exercises-level-1)
+    - [Exercises: Level 2](#exercises-level-2)
 
-# Day 8
+# 📔 Day 8
 
 ## Scope
 
@@ -113,7 +111,7 @@ function letsLearnScope() {
     console.log(a, b, c) // Python 20 30
   }
   // we can not access c because c's scope is only the if block
-  console.log(a, b)
+  console.log(a, b) // JavaScript 10
 }
 letsLearnScope()
 console.log(a, b) // JavaScript 10, accessible
@@ -422,12 +420,17 @@ console.log(copyPerson.hasOwnProperty('score'))
 
 ## 💻 Exercises
 
+### Exercises: Level 1
+
 1. Create an empty object called dog
 1. Print the the dog object on the console
 1. Add name, legs, color, age and bark properties for the dog object. The bark property is a method which return _woof woof_
 1. Get name, legs, color, age and bark value from the dog object
 1. Set new properties the dog object: breed, getDogInfo
-1. Create an object literal called _personAccount_. It has _firstName, lastName, incomes, expenses_ properties and it has _totalIncome, totalExpense, accountInfo,addIncome, addExpense_ and _accountBalance_ methods. Incomes is a set of incomes and its description and expenses is a set of incomes and its description.
+
+### Exercises: Level 2
+
+1. Find the person who has many skills in the users object.
 1. Count logged in users,count users having greater than equal to 50 points from the following object.
 
    ````js
@@ -483,101 +486,102 @@ console.log(copyPerson.hasOwnProperty('score'))
      }
    }```
 
-   ````
-
 1. Find people who are MERN stack developer from the users object
 1. Set your name in the users object without modifying the original users object
 1. Get all keys or properties of users object
 1. Get all the values of users object
 1. Use the countries object to print a country name, capital, populations and languages.
-1. \*\*\* Find the 10 most spoken languages:
 
-   ````js
-   // Your output should look like this
-   console.log(mostSpokenLanguages(countries, 10))
-   [(91, 'English'),
-   (45, 'French'),
-   (25, 'Arabic'),
-   (24, 'Spanish'),
-   (9, 'Russian'),
-   (9, 'Portuguese'),
-   (8, 'Dutch'),
-   (7, 'German'),
-   (5, 'Chinese'),
-   (4, 'Swahili'),
-   (4, 'Serbian')]
+### Exercises: Level 3
 
-   // Your output should look like this
-   console.log(mostSpokenLanguages(countries, 3))
-   [
-   (91, 'English'),
-   (45, 'French'),
-   (25, 'Arabic')
-   ]```
+1. Create an object literal called _personAccount_. It has _firstName, lastName, incomes, expenses_ properties and it has _totalIncome, totalExpense, accountInfo,addIncome, addExpense_ and _accountBalance_ methods. Incomes is a set of incomes and its description and expenses is a set of incomes and its description.
+2. **** Questions:2, 3 and 4 are based on the following two arrays:users and products ()
 
-   ````
+  ```js
+      const users = [
+      {
+          _id: 'ab12ex',
+          username: 'Alex',
+          email: 'alex@alex.com',
+          password: '123123',
+          createdAt:'08/01/2020 9:00 AM',
+          isLoggedIn: false
+      },
+      {
+          _id: 'fg12cy',
+          username: 'Asab',
+          email: 'asab@asab.com',
+          password: '123456',
+          createdAt:'08/01/2020 9:30 AM',
+          isLoggedIn: true
+      },
+      {
+          _id: 'zwf8md',
+          username: 'Brook',
+          email: 'brook@brook.com',
+          password: '123111',
+          createdAt:'08/01/2020 9:45 AM',
+          isLoggedIn: true
+      },
+      {
+          _id: 'eefamr',
+          username: 'Martha',
+          email: 'martha@martha.com',
+          password: '123222',
+          createdAt:'08/01/2020 9:50 AM',
+          isLoggedIn: false
+      },
+      {
+          _id: 'ghderc',
+          username: 'Thomas',
+          email: 'thomas@thomas.com',
+          password: '123333',
+          createdAt:'08/01/2020 10:00 AM',
+          isLoggedIn: false
+      }
+      ];
 
-1. \*\*\* Use countries_data.js file create a function which create the ten most populated countries
+      const products = [
+    {
+      _id: 'eedfcf',
+      name: 'mobile phone',
+      description: 'Huawei Honor',
+      price: 200,
+      ratings: [
+        { userId: 'fg12cy', rate: 5 },
+        { userId: 'zwf8md', rate: 4.5 }
+      ],
+      likes: []
+    },
+    {
+      _id: 'aegfal',
+      name: 'Laptop',
+      description: 'MacPro: System Darwin',
+      price: 2500,
+      ratings: [],
+      likes: ['fg12cy']
+    },
+    {
+      _id: 'hedfcg',
+      name: 'TV',
+      description: 'Smart TV:Procaster',
+      price: 400,
+      ratings: [{ userId: 'fg12cy', rate: 5 }],
+      likes: ['fg12cy']
+    }
+  ]
+  ```
 
-   ````js
-   console.log(mostPopulatedCountries(countries, 10))
+  Imagine you are getting the above users collection from a MongoDB database.
+    a. Create a function called signUp which allows user to add to the collection. If user exists, inform the user that he has already an account.
+    b. Create a function called signIn which allows user to sign in to the application
+3. The products array has three elements and each of them has six properties.
+    a. Create a function called rateProduct which rates the product
+    b. Create a function called averageRating which calculate the average rating of a product
 
-   [
-   {country: 'China', population: 1377422166},
-   {country: 'India', population: 1295210000},
-   {country: 'United States of America', population: 323947000},
-   {country: 'Indonesia', population: 258705000},
-   {country: 'Brazil', population: 206135893},
-   {country: 'Pakistan', population: 194125062},
-   {country: 'Nigeria', population: 186988000},
-   {country: 'Bangladesh', population: 161006790},
-   {country: 'Russian Federation', population: 146599183},
-   {country: 'Japan', population: 126960000}
-   ]
+4. Create a function called likeProduct. This function will helps to like to the product if it is not liked and remove like if it was liked.
 
-   console.log(mostPopulatedCountries(countries, 3))
-   [
-   {country: 'China', population: 1377422166},
-   {country: 'India', population: 1295210000},
-   {country: 'United States of America', population: 323947000}
-   ]```
-
-   ````
-
-1. \*\*\* Try to develop a program which calculate measure of central tendency of a sample(mean, median, mode) and measure of variability(range, variance, standard deviation). In addition to those measures find the min, max, count, percentile, and frequency distribution of the sample. You can create an object called statistics and create all the functions which do statistical calculations as method for the statistics object. Check the output below.
-
-   ```js
-   const ages = [31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]
-
-   console.log('Count:', statistics.count()) // 25
-   console.log('Sum: ', statistics.sum()) // 744
-   console.log('Min: ', statistics.min()) // 24
-   console.log('Max: ', statistics.max()) // 38
-   console.log('Range: ', statistics.range() // 14
-   console.log('Mean: ', statistics.mean()) // 30
-   console.log('Median: ',statistics.median()) // 29
-   console.log('Mode: ', statistics.mode()) // {'mode': 26, 'count': 5}
-   console.log('Variance: ',statistics.var()) // 17.5
-   console.log('Standard Deviation: ', statistics.std()) // 4.2
-   console.log('Variance: ',statistics.var()) // 17.5
-   console.log('Frequency Distribution: ',statistics.freqDist()) # [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
-   ```
-
-   ```sh
-   console.log(statistics.describe())
-   Count: 25
-   Sum:  744
-   Min:  24
-   Max:  38
-   Range:  14
-   Mean:  30
-   Median:  29
-   Mode:  (26, 5)
-   Variance:  17.5
-   Standard Deviation:  4.2
-   Frequency Distribution: [(20.0, 26), (16.0, 27), (12.0, 32), (8.0, 37), (8.0, 34), (8.0, 33), (8.0, 31), (8.0, 24), (4.0, 38), (4.0, 29), (4.0, 25)]
-   ```
 
 🎉 CONGRATULATIONS ! 🎉
 
-[<< Day 7](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/09_Day/09_day_function_programming.md) | [Day 9 >>](#)
+[<< Day 7](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/07_Day/07_day_functions.md) | [Day 9 >>](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/09_Day/09_day_higher_order_functions.md)
